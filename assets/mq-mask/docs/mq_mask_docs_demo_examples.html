@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mq-mask — Documentation & Examples</title>
+
+  <!-- mq-mask CSS -->
+  <link rel="stylesheet" href="mq-mask.css" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #020617, #020617 60%, #020617);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1.5rem 5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .example {
+      padding: 0.75rem;
+      border-radius: 10px;
+      background: #020617;
+      border: 1px dashed #334155;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    code {
+      display: block;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 0.75rem;
+      font-size: 0.85rem;
+      color: #bae6fd;
+      margin-bottom: 0.75rem;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: var(--muted);
+      border-top: 1px solid #1f2937;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>mq-mask</h1>
+    <p>
+      A minimal CSS utility for masking (hiding) elements using precise screen widths.
+      Compose ranges. Don’t memorize breakpoints.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- INTRO -->
+    <section>
+      <h2>How It Works</h2>
+      <div class="card">
+        <p>
+          mq-mask provides only two utilities per width:
+        </p>
+        <code>
+.mq-none-{width}-below  /* hides at ≤ width */ <br />
+.mq-none-{width}-above  /* hides at ≥ width + 1 */
+        </code>
+        <p class="note">
+          Combine both classes to hide elements between two screen widths.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXAMPLES -->
+    <section>
+      <h2>Examples</h2>
+
+      <div class="grid">
+
+        <!-- MOBILE ONLY -->
+        <div class="card">
+          <p>Mobile-only element</p>
+          <code>&lt;div class="mq-none-480-above"&gt;...&lt;/div&gt;</code>
+          <div class="example mq-none-480-above">
+            Visible ≤ 480px
+          </div>
+        </div>
+
+        <!-- DESKTOP ONLY -->
+        <div class="card">
+          <p>Desktop-only element</p>
+          <code>&lt;div class="mq-none-768-below"&gt;...&lt;/div&gt;</code>
+          <div class="example mq-none-768-below">
+            Visible ≥ 769px
+          </div>
+        </div>
+
+        <!-- TABLET ONLY -->
+        <div class="card">
+          <p>Tablet-only element</p>
+          <code>&lt;div class="mq-none-600-below mq-none-900-above"&gt;...&lt;/div&gt;</code>
+          <div class="example mq-none-600-below mq-none-900-above">
+            Visible 601–900px
+          </div>
+        </div>
+
+        <!-- HIDE BETWEEN -->
+        <div class="card">
+          <p>Hidden between 401px – 600px</p>
+          <code>&lt;div class="mq-none-400-below mq-none-600-above"&gt;...&lt;/div&gt;</code>
+          <div class="example mq-none-400-below mq-none-600-above">
+            Hidden between 401–600px
+          </div>
+        </div>
+
+        <!-- HIDE BELOW -->
+        <div class="card">
+          <p>Hidden below 550px</p>
+          <code>&lt;div class="mq-none-550-above"&gt;...&lt;/div&gt;</code>
+          <div class="example mq-none-550-above">
+            Hidden below 550px
+          </div>
+        </div>
+
+        <!-- HIDE ABOVE -->
+        <div class="card">
+          <p>Hidden above 750px</p>
+          <code>&lt;div class="mq-none-750-below"&gt;...&lt;/div&gt;</code>
+          <div class="example mq-none-750-below">
+            Hidden above 750px
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RANGE INFO -->
+    <section>
+      <h2>Supported Widths</h2>
+      <div class="card">
+        <p>
+          mq-mask supports every pixel width between:
+        </p>
+        <code>320px → 1200px</code>
+        <p class="note">
+          This allows precise control without relying on abstract breakpoint names like sm, md, or lg.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    mq-mask v1.0 · Pure CSS · MIT License
+  </footer>
+
+</body>
+</html>
