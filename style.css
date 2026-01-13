@@ -267,6 +267,12 @@ h1, h2, h3, h4, h5, h6, p, span, li, a, button {
     font-size: 3.6rem;
 }
 
+/* EBOOK CARD */
+.card-ebook {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 
 /****** BUTTON STYLES ******/
 .btn-alt {
