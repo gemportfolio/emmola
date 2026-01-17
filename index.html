@@ -24,6 +24,7 @@
 		>
 
         <!-- STYLESHEETS -->
+        <link rel="stylesheet" href="./assets/scroll-carousel/scroll.carousel.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
         <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick.css">
@@ -36,6 +37,7 @@
 		/>
         
         <!-- SCRIPTS -->
+         <script src="./assets/scroll-carousel/scroll.carousel.min.js"></script>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -184,13 +186,13 @@
                         </h1>
                         <p class="text-uppercase col-softivory">Creatives Trained</p>
                     </div>
-                    <div class="col-md-4 text-center border-start py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
+                    <div class="col-md-4 text-center border-light border-opacity-50 border-start py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
                         <h1 class="col-softivory">
                             <span class="counter" data-target="700" data-speed="100">0</span>+
                         </h1>
                         <p class="text-uppercase col-softivory">Students Across 10+ Countries</p>
                     </div>
-                    <div class="col-md-4 text-center border-start py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
+                    <div class="col-md-4 text-center border-light border-opacity-50 border-start py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
                         <h1 class="col-softivory">
                             <span class="counter" data-target="5" data-speed="100">0</span>+
                         </h1>
@@ -204,13 +206,13 @@
                         </h1>
                         <p class="text-uppercase col-softivory">Creatives Trained</p>
                     </div>
-                    <div class="col-md-4 text-center border-top py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
+                    <div class="col-md-4 text-center border-light border-opacity-50 border-top py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
                         <h1 class="col-softivory">
                             <span class="counter" data-target="700" data-speed="100">0</span>+
                         </h1>
                         <p class="text-uppercase col-softivory">Students Across 10+ Countries</p>
                     </div>
-                    <div class="col-md-4 text-center border-top py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
+                    <div class="col-md-4 text-center border-light border-opacity-50 border-top py-3" data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1440">
                         <h1 class="col-softivory">
                             <span class="counter" data-target="5" data-speed="100">0</span>+
                         </h1>
@@ -250,6 +252,34 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- SPEAKING ENGAGEMENT CAROUSEL -->
+        <section class="engagement-carousel-section pb-5">
+            <div class="row text-center pb-4" data-aos="flip-left" data-aos-once="true">
+                <h1 class="col-primarypurple">Speaking Engagements</h1>
+            </div>
+            <div class="eng-carousel pb-4">
+                <div class="my-slide">
+                    <img src="./assets/img/img-engagement1.jpeg" class="rounded-4" />
+                </div>
+                <div class="my-slide">
+                    <img src="./assets/img/img-engagement2.jpeg" class="rounded-4" />
+                </div>
+                <div class="my-slide">
+                    <img src="./assets/img/img-engagement3.jpeg" class="rounded-4" />
+                </div>
+                <div class="my-slide">
+                    <img src="./assets/img/img-engagement4.jpeg" class="rounded-4" />
+                </div>
+                <div class="my-slide">
+                    <img src="./assets/img/img-engagement5.jpeg" class="rounded-4" />
+                </div>
+            </div>
+        </section>
+        <script>
+            new ScrollCarousel(".eng-carousel", {speed: 8, smartSpeed: true, autoplay: true});
+        </script>
 
 
         <!-- SERVICES -->
@@ -385,6 +415,64 @@
         </section>
 
 
+        <!-- TESTIMONIAL SLIDER -->
+        <section class="testimonials pb-5">
+            <div class="container pb-4">
+                <div class="row text-center pb-4">
+                    <h1 class="col-primarypurple">Testimonials</h1>
+                </div>
+                <div class="testimonial-slider pb-4">
+                    <div class="card-testimonial mx-3">
+                        <a href="assets/img/img-testimonial1.jpg" class="lightbox-trigger">
+                            <img src="./assets/img/img-testimonial1.jpg" class="w-100 rounded-4 border-primarypurple" />
+                        </a>
+                    </div>
+                    <div class="card-testimonial mx-3">
+                        <a href="assets/img/img-testimonial2.jpg" class="lightbox-trigger">
+                            <img src="./assets/img/img-testimonial2.jpg" class="w-100 rounded-4 border-primarypurple" />
+                        </a>
+                    </div>
+                    <div class="card-testimonial mx-3">
+                        <a href="assets/img/img-testimonial3.jpg" class="lightbox-trigger">
+                            <img src="./assets/img/img-testimonial3.jpg" class="w-100 rounded-4 border-primarypurple" />
+                        </a>
+                    </div>
+                    <div class="card-testimonial mx-3">
+                        <a href="assets/img/img-testimonial4.jpg" class="lightbox-trigger">
+                            <img src="./assets/img/img-testimonial4.jpg" class="w-100 rounded-4 border-primarypurple" />
+                        </a>
+                    </div>
+                    <div class="card-testimonial mx-3">
+                        <a href="assets/img/img-testimonial5.jpg" class="lightbox-trigger">
+                            <img src="./assets/img/img-testimonial5.jpg" class="w-100 rounded-4 border-primarypurple" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./assets/slick-1.8.1/slick/slick.min.js"></script>
+        <script>
+            // Slick Slider
+            $('.testimonial-slider').slick({
+              arrows: false,
+              dots: true,
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 3000,
+              responsive: [
+                {
+                  breakpoint: 767,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                }
+              ]
+            });
+        </script>
+
+
         <!-- EXPERIENCE & AWARDS -->
         <section class="experienceandawards py-5" id="experienceandawards" style="scroll-margin-top: 40px;">
             <div class="container pt-4 pb-5">
@@ -488,9 +576,86 @@
                         </div>
                     </div>
                 </div>
+                <!-- CERTIFICATE AWARDS -->
+                <div class="row certificates pt-5">
+                    <div class="certificate-slider py-4">
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-MagmaAward.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-MagmaAward.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-ASFLeadershipAward.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-ASFLeadershipAward.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-Recalibration.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-Recalibration.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-EduFest.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-EduFest.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-EmmanuelOlajide.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-EmmanuelOlajide.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-EmmanuelOlajide_084212.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-EmmanuelOlajide_084212.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-ExcellentLeadershipAwardIfoCDS.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-ExcellentLeadershipAwardIfoCDS.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-SUGDebateAward.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-SUGDebateAward.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-ViceChancellorAward.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-ViceChancellorAward.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                        <div class="card-certificate mx-2">
+                            <a href="assets/img/certificate-AwardSDGsIfo.jpg" class="lightbox-trigger">
+                                <img src="./assets/img/certificate-AwardSDGsIfo.jpg" class="w-100 rounded-4 border-primarypurple" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        
+        <script>
+            // Slick Slider
+            $('.certificate-slider').slick({
+              arrows: false,
+              dots: true,
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 3000,
+              responsive: [
+                {
+                  breakpoint: 767,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                }
+              ]
+            });
+        </script>
+
+
+        <!-- EBOOKS ON SELAR -->
         <section class="selar-ebooks py-5">
             <div class="container py-5">
                 <div class="row text-center pb-4">
@@ -498,6 +663,22 @@
                 </div>
                 <div class="row">
                     <div class="d-flex ebooks-slider pb-4">
+                        <div class="card-ebook rounded-3 border-softgray border-primarypurple-hover h-100">
+                            <div class="ratio ratio-1x1 overflow-hidden">
+                                <img 
+                                    src="./assets/img/book-called-to-serve-selar.com-68c3c3518b2b6.jpg" 
+                                    class="w-100 h-100 object-fit-cover rounded-top-3 lazy-el" 
+                                    style="object-fit: cover; object-position: top;"
+                                    alt="Image">
+                            </div>
+                            <div class="text-center px-3 pt-2 pb-4">
+                                <h5 class="mb-0">Called to Serve</h5>
+                                <h6 class="mb-3">(₦3,999 <span class="text-decoration-line-through">₦7,000</span>)</h6>
+                                <a href="https://selar.com/107vs9k971" class="btn-alt rounded-3 bg-primarypurple bg-deepplum-hover text-white">
+                                    Buy on Selar
+                                </a>
+                            </div>
+                        </div>
                         <div class="card-ebook rounded-3 border-softgray border-primarypurple-hover h-100">
                             <div class="ratio ratio-1x1 overflow-hidden">
                                 <img 
@@ -598,7 +779,6 @@
                 </div>
             </div>
         </section>
-        <script src="./assets/slick-1.8.1/slick/slick.min.js"></script>
         <script>
             // Slick Slider
             $('.ebooks-slider').slick({
@@ -633,6 +813,47 @@
               ]
             });
         </script>
+
+
+        <!-- CONTACT -->
+        <section class="contact bg-softgray py-5">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./assets/img/emmanuel-olajide3.jpeg" class="w-100 rounded-4 object-fit-cover mq-none-991-above" />
+                        <img src="./assets/img/emmanuel-olajide3-alt.jpeg" class="w-100 rounded-4 object-fit-cover mq-none-991-below" />
+                    </div>
+                    <div class="col-lg-6 pt-5 pt-lg-0">
+                        <div class="col-softivory rounded-4 py-5 px-4 px-md-5 h-100" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1440" style="background: linear-gradient(135deg, #3A0D3F, #6B1E7C);">
+                            <h1 class="pb-3">Contact Me</h1>
+                            <form
+                            action="https://formspree.io/f/mgoovnjj"
+                            method="POST"
+                            class="d-flex flex-column"
+                            >
+                                <label class="fs-5 pb-1">
+                                    Your Name:
+                                </label>
+                                <input type="name" name="name" class="mb-4 rounded-3 p-2 border-softgray">
+
+                                <label class="fs-5 pb-1">
+                                    Your Email:
+                                </label>
+                                <input type="email" name="email" class="mb-4 rounded-3 p-2 border-softgray">
+
+                                <label class="fs-5 pb-1">
+                                    Your Message:
+                                </label>
+                                <textarea name="message" class="mb-4 rounded-3 p-2 border-winered"></textarea>
+
+                                <button type="submit" class="fs-5 fw-medium btn-alt rounded-3 bg-goldaccent bg-softgray-hover col-softivory col-primarypurple-hover border-0" style="letter-spacing: 4px;">SEND</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- CTA 1 SECTION -->
         <section class="cta1-section py-5" id="startproject" style="background: linear-gradient(180deg, #6B1E7C, #3A0D3F); scroll-margin-top: 40px;">
@@ -678,7 +899,7 @@
                 </div>
                 <hr class="border-light my-5" />
                 <p class="text-white-50 text-uppercase" id="connect" style="letter-spacing: 4px;">
-                    Connect on Social Media
+                    Connect With Me
                 </p>
                 <div>
                     <a href="https://web.facebook.com/olajide.emmanuel.568" class="rounded-circle fs-2 col-softivory mx-2">
@@ -686,6 +907,9 @@
                     </a>
                     <a href="https://www.linkedin.com/in/emmanuel-olajide-37301a231" class="rounded-circle fs-2 col-softivory mx-2">
                         <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCGarT_RZzYo2nloUxxR1R8w" class="rounded-circle fs-2 col-softivory mx-2">
+                        <i class="bi bi-youtube"></i>
                     </a>
                 </div>
             </div>
