@@ -24,7 +24,6 @@
 		>
 
         <!-- STYLESHEETS -->
-        <link rel="stylesheet" href="./assets/scroll-carousel/scroll.carousel.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
         <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick.css">
@@ -37,11 +36,10 @@
 		/>
         
         <!-- SCRIPTS -->
-        <script src="./assets/scroll-carousel/scroll.carousel.min.js"></script>
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="/src/main.js"></script>
 
         <script src="https://www.google.com/recaptcha/api.js"></script>
         <script>
@@ -270,27 +268,34 @@
             <div class="row text-center pb-4" data-aos="flip-left" data-aos-once="true">
                 <h1 class="col-primarypurple">Speaking Engagements</h1>
             </div>
-            <div class="eng-carousel pb-4">
-                <div class="my-slide">
-                    <img src="./assets/img/img-engagement1.jpeg" class="rounded-4" />
-                </div>
-                <div class="my-slide">
-                    <img src="./assets/img/img-engagement2.jpeg" class="rounded-4" />
-                </div>
-                <div class="my-slide">
-                    <img src="./assets/img/img-engagement3.jpeg" class="rounded-4" />
-                </div>
-                <div class="my-slide">
-                    <img src="./assets/img/img-engagement4.jpeg" class="rounded-4" />
-                </div>
-                <div class="my-slide">
-                    <img src="./assets/img/img-engagement5.jpeg" class="rounded-4" />
+            <div id="splide" class="splide pb-4" aria-label="Image carousel">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="./assets/img/img-engagement1.jpeg" alt="Image 1" />
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./assets/img/img-engagement2.jpeg" alt="Image 2" />
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./assets/img/img-engagement3.jpeg" alt="Image 3" />
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./assets/img/img-engagement4.jpeg" alt="Image 3" />
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./assets/img/img-engagement5.jpeg" alt="Image 3" />
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <script>
-            new ScrollCarousel(".eng-carousel", {speed: 8, smartSpeed: true, autoplay: true});
-        </script>
+        <style>
+            .splide__slide img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        </style>
 
 
         <!-- SERVICES -->

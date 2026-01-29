@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box !important;
+}
+
+* {
+    transition: all 0.44s;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-purple: #6B1E7C;
+    --deep-plum: #3A0D3F;
+    --gold-accent: #F2B705;
+    --soft-ivory: #F9F5FB;
+    --heading-dark: #1A0B1F;
+    --body-text: #3A2C40;
+    --soft-gray: #D8D2DC;
+    --white: #fff;
+
+    --fontGoogleSans: "Google Sans", sans-serif;
+}
+
+body {
+	overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+    background-color: var(--soft-ivory);
+    color: var(--body-text);
+    font-family: var(--fontGoogleSans);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li, a, button {
+    font-family: var(--fontGoogleSans);
+}
+
+
+/* CUSTOM SUPPORT CLASSES */
+/* COLOR PRIMARY PURPLE */
+.bg-primarypurple,
+.bg-primarypurple-hover:hover {
+    background-color: var(--primary-purple) !important;
+}
+.col-primarypurple,
+.col-primarypurple-hover:hover {
+    color: var(--primary-purple) !important;
+}
+.border-primarypurple,
+.border-primarypurple-hover:hover {
+    border: solid 1px #6b1e7c80 !important;
+}
+
+/* COLOR DEEP PLUM */
+.bg-deepplum,
+.bg-deepplum-hover:hover {
+    background-color: var(--deep-plum) !important;
+}
+.col-deepplum,
+.col-deepplum-hover:hover {
+    color: var(--deep-plum) !important;
+}
+.border-deepplum,
+.border-deepplum-hover:hover {
+    border: solid 1px var(--deep-plum) !important;
+}
+
+/* COLOR SOFT GRAY */
+.bg-softivory,
+.bg-softivory-hover:hover {
+    background-color: var(--soft-ivory) !important;
+}
+.col-softivory,
+.col-softivory-hover:hover {
+    color: var(--soft-ivory) !important;
+}
+.border-softivory,
+.border-softivory-hover:hover {
+    border: solid 1px var(--soft-ivory) !important;
+}
+
+/* COLOR SOFT GRAY */
+.bg-softgray,
+.bg-softgray-hover:hover {
+    background-color: var(--soft-gray) !important;
+}
+.col-softgray,
+.col-softgray-hover:hover {
+    color: var(--soft-gray) !important;
+}
+.border-softgray,
+.border-softgray-hover:hover {
+    border: solid 1px var(--soft-gray) !important;
+}
+
+/* COLOR GOLD ACCENT */
+.bg-goldaccent {
+    background-color: var(--gold-accent);
+}
+.col-goldaccent {
+    color: var(--gold-accent);
+}
+
+/* WIDTH FIT CONTENT */
+.width-fit-content {
+    width: fit-content;
+}
+/* TEXT JUSTIFY */
+.text-justify {
+    text-align: justify;
+}
+
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--soft-ivory);
+    backdrop-filter: blur(72px);
+    -webkit-backdrop-filter: blur(72px);
+}
+
+.navbar .navbar-brand img {
+    width: 44px;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: var(--body-text);
+}
+.nav-link:hover {
+    color: var(--primary-purple);
+    transition: all 0.12s;
+}
+
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92)
+    ),
+    url("./assets/img/hero-bg.jpg");
+
+  background-size: cover;
+  background-position: 20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero .tag-pub {
+    height: 1.8rem;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 767px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+}
+
+
+/* FIGURES */
+.figures h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+
+/* ENGAGEMENT CAROUSEL */
+.engagement-carousel-section .eng-carousel .my-slide {
+    /* padding-left: 12px; */
+    /* padding-right: 12px; */
+}
+.engagement-carousel-section .eng-carousel img {
+    width: 350px;
+}
+@media screen and (max-width: 425px) {
+    .engagement-carousel-section .eng-carousel img {
+        width: 320px;
+    }
+}
+
+
+/* MENTORSHIP */
+.mentorship .svg-underline {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.75rem;
+    z-index: -10;
+}
+
+.mentorship .svg-underline path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 8;
+}
+
+
+/* AWARDS */
+.awards {
+    min-height: 100vh;
+    background-image: 
+    linear-gradient(
+      rgba(58, 13, 63, 0.92),
+      rgba(107, 30, 124, 0.92)
+    ),
+    url("./assets/img/experienceawards-bg.jpg");
+
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.award-slider .slick-prev,
+.award-slider .slick-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.award-slider .slick-dots li button:before,
+.certificate-slider .slick-dots li button:before {
+    opacity: .25;
+    color: white;
+}
+.award-slider .slick-dots li.slick-active button:before,
+.certificate-slider .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: white;
+}
+
+
+/******* CARDS ******/
+/* SERVICE CARDS */
+.service-card {
+    transition: all 0.3s ease;
+    padding: 32px 24px;
+    height: 100%;
+    background-color: var(--white);
+}
+.service-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon box */
+.service-card .icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.service-card .icon-box {
+    background-color: var(--primary-purple);
+    color: var(--soft-ivory);
+}
+.service-card:hover .icon-box {
+    background-color: var(--soft-ivory);
+    color: var(--primary-purple);
+    transform: scale(1.2);
+}
+
+/* AWARD CARDS */
+.award-card {
+    background-color: #ffffffd8;
+    backdrop-filter: blur(72px);
+    -webkit-backdrop-filter: blur(72px);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.award-card .material-symbols-outlined {
+    font-size: 3.6rem;
+}
+
+/* EBOOK CARD */
+.card-ebook {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+
+/****** BUTTON STYLES ******/
+.btn-alt {
+    padding: 14px 28px;
+}
+
+
+/****** CUSTOM TRANSITIONS ******/
+.icon-wrap {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  position: absolute;
+  inset: 0;
+  transition: all 0.64s ease;
+}
+
+.icon-hover {
+  opacity: 0;
+  transform: translate(-12px, 12px);
+}
+
+.btn-alt:hover .icon-default {
+  opacity: 0;
+  transform: translate(12px, -12px);
+}
+
+.btn-alt:hover .icon-hover {
+  opacity: 1;
+  transform: translate(0, 0);
+}
